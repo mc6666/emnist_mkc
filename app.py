@@ -7,7 +7,6 @@ from skimage.color import rgb2gray, rgba2rgb
 
 import numpy as np  
 import tensorflow as tf
-import keras
 
 st.set_page_config(
     page_title = "英文字母辨識",
@@ -17,7 +16,7 @@ st.set_page_config(
 # 模型載入
 # @st.cache_resource
 def load_model():
-    return keras.saving.load_model('emnist_cnn_model.keras')
+    return  tf.keras.models.load_model('emnist_cnn_model.keras')
 
 model = load_model()
 
