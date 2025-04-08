@@ -14,7 +14,6 @@ st.set_page_config(
 )
 
 # 模型載入
-st.cache_data()
 def load_model():
     return tf.keras.models.load_model('emnist_cnn_model.keras')
 
